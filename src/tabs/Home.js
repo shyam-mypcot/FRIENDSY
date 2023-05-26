@@ -90,7 +90,7 @@ const Home = () => {
           paddingLeft: 20,
           backgroundColor: '#fff',
         }}>
-        <Text style={{fontSize: 20, color: '#000', fontWeight: '700'}}>
+        <Text style={{ color:'#000',fontSize: 20,  fontWeight: '700'}}>
         FRIENDSY
         </Text>
       </View>
@@ -131,12 +131,13 @@ const Home = () => {
                     }}
                   />
                   <Text
-                    style={{fontSize: 18, marginLeft: 15, fontWeight: '600'}}>
+                    style={{color:'#000',fontSize: 18, marginLeft: 15, fontWeight: '600'}}>
                     {item.name}
                   </Text>
                 </View>
                 <Text
                   style={{
+                    color:'#000',
                     marginTop: 10,
                     marginLeft: 20,
                     marginRight: 20,
@@ -168,7 +169,7 @@ const Home = () => {
                       onLike(item);
                     }}
                     style={{flexDirection: 'row', alignItems: 'center'}}>
-                    <Text style={{marginRight: 10, fontSize: 18}}>
+                    <Text style={{ color:'#000',marginRight: 10, fontSize: 18}}>
                       {item.likes.length}
                     </Text>
                     {getLikesStaus(item.likes) ? (
@@ -191,7 +192,7 @@ const Home = () => {
                         comments: item.comments,
                       });
                     }}>
-                    <Text style={{marginRight: 10}}>
+                    <Text style={{ color:'#000',marginRight: 10}}>
                       {item.comments.length}
                     </Text>
                     <Image
@@ -206,7 +207,7 @@ const Home = () => {
         />
       ) : (
         <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
-          <Text>No Post Found</Text>
+          <Text style={{color:'#000',}}>No Post Found</Text>
         </View>
       )}
     </View>

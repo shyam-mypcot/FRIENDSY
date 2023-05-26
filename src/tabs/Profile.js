@@ -96,7 +96,7 @@ const Profile = () => {
           borderBottomColor: '#8e8e8e',
           alignItems: 'center',
         }}>
-        <Text style={{marginLeft: 15, fontSize: 18, fontWeight: '600'}}>
+        <Text style={{ color:'#000',marginLeft: 15, fontSize: 18, fontWeight: '600'}}>
           Profile
         </Text>
       </View>
@@ -147,7 +147,7 @@ const Profile = () => {
             uploadProfilePic();
           }
         }}>
-        <Text style={{color: 'orange'}}>
+        <Text style={{ color: 'orange'}}>
           {imagePicked === true ? 'Save Pic' : 'Edit Profile'}
         </Text>
       </TouchableOpacity>
@@ -172,7 +172,7 @@ const Profile = () => {
           onPress={() => {
             setSelectedTab(0);
           }}>
-          <Text style={{fontSize: 18}}>Followers</Text>
+          <Text style={{ color:'#000',fontSize: 18}}>Followers</Text>
         </TouchableOpacity>
         <TouchableOpacity
           style={{
@@ -185,7 +185,7 @@ const Profile = () => {
           onPress={() => {
             setSelectedTab(1);
           }}>
-          <Text style={{fontSize: 18}}>Following</Text>
+          <Text style={{ color:'#000',fontSize: 18}}>Following</Text>
         </TouchableOpacity>
       </View>
 
@@ -218,7 +218,7 @@ const Profile = () => {
                       marginRight: 10,
                     }}
                   />
-                  <Text style={{fontSize: 18, fontWeight: '600'}}>
+                  <Text style={{ color:'#000',fontSize: 18, fontWeight: '600'}}>
                     {item.name}
                   </Text>
                 </View>
@@ -277,7 +277,7 @@ const Profile = () => {
                       marginRight: 10,
                     }}
                   />
-                  <Text style={{fontSize: 18, fontWeight: '600'}}>
+                  <Text style={{ color:'#000',fontSize: 18, fontWeight: '600'}}>
                     {item.name}
                   </Text>
                 </View>

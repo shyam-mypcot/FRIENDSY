@@ -132,7 +132,7 @@ const Add = ({onAdded}) => {
           borderBottomWidth: 0.5,
           borderBottomColor: '#8e8e8e',
         }}>
-        <Text style={{marginLeft: 20, fontSize: 20, color: '#000'}}> Post</Text>
+        <Text style={{ color:'#000',marginLeft: 20, fontSize: 20, }}> Post</Text>
         <Text
           style={{
             marginRight: 20,
@@ -172,13 +172,14 @@ const Add = ({onAdded}) => {
             style={{width: 50, height: 50, borderRadius: 10, margin: 10}}
           />
         )}
-        <TextInput
+        <TextInput placeholderTextColor={'#202020'}
+
           value={caption}
           onChangeText={txt => {
             setCaption(txt);
           }}
           placeholder="type Caption here..."
-          style={{width: '70%'}}
+          style={{width: '70%',color:'#000',}}
         />
       </View>
       <TouchableOpacity
@@ -198,7 +199,7 @@ const Add = ({onAdded}) => {
           source={require('../images/camera.png')}
           style={{width: 24, height: 24, marginLeft: 20}}
         />
-        <Text style={{marginLeft: 20}}>Open Camera</Text>
+        <Text style={{ color:'#000',marginLeft: 20}}>Open Camera</Text>
       </TouchableOpacity>
       <TouchableOpacity
         style={{
@@ -217,7 +218,7 @@ const Add = ({onAdded}) => {
           source={require('../images/gallery.png')}
           style={{width: 24, height: 24, marginLeft: 20}}
         />
-        <Text style={{marginLeft: 20}}>Open Gallery</Text>
+        <Text style={{ color:'#000',marginLeft: 20}}>Open Gallery</Text>
       </TouchableOpacity>
       <Loader modalVisible={modalVisible} setModalVisible={setModalVisible} />
     </View>

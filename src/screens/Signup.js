@@ -60,13 +60,15 @@ const Signup = ({navigation}) => {
       <Text
         style={{
           alignSelf: 'center',
+          color:'#000',
           marginTop: 100,
           fontSize: 20,
           fontWeight: '800',
         }}>
         FRIENDSY
       </Text>
-      <TextInput
+      <TextInput placeholderTextColor={'#202020'}
+
         value={name}
         onChangeText={txt => {
           setName(txt);
@@ -80,9 +82,11 @@ const Signup = ({navigation}) => {
           alignSelf: 'center',
           paddingLeft: 15,
           marginTop: 100,
+          color:'#000',
         }}
       />
-      <TextInput
+      <TextInput placeholderTextColor={'#202020'}
+
         value={email}
         onChangeText={txt => {
           setEmail(txt);
@@ -96,9 +100,11 @@ const Signup = ({navigation}) => {
           alignSelf: 'center',
           paddingLeft: 15,
           marginTop: 20,
+          color:'#000',
         }}
       />
-      <TextInput
+      <TextInput placeholderTextColor={'#202020'}
+
         value={password}
         onChangeText={txt => {
           setPassword(txt);
@@ -112,6 +118,7 @@ const Signup = ({navigation}) => {
           borderWidth: 0.5,
           alignSelf: 'center',
           marginTop: 20,
+          color:'#000',
         }}
       />
       <TouchableOpacity
@@ -128,7 +135,7 @@ const Signup = ({navigation}) => {
         onPress={() => {
           saveData();
         }}>
-        <Text style={{fontSize: 20, color: '#000'}}>Sign up</Text>
+        <Text style={{ color:'#000',fontSize: 20}}>Sign up</Text>
       </TouchableOpacity>
       <Loader modalVisible={modalVisible} setModalVisible={setModalVisible} />
     </View>

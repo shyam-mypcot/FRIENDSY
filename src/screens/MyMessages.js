@@ -6,6 +6,7 @@ import firestore from '@react-native-firebase/firestore';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
 let userId = '';
+let chatList = [{chatId:'12345678'}];
 
 const MyMessages = () => {
   const route = useRoute();
@@ -48,6 +49,26 @@ const MyMessages = () => {
         ...mymsg,
         createdAt: firestore.FieldValue.serverTimestamp(),
       });
+      firestore()
+    .collection('Users')
+    .doc(userId)
+    .update({
+      chatList: chatList,
+    })
+    .then(res => {})
+    .catch(error => {
+      console.log(error);
+    });
+    firestore()
+    .collection('Users')
+    .doc(route.params.data.userId)
+    .update({
+      chatList: chatList,
+    })
+    .then(res => {})
+    .catch(error => {
+      console.log(error);
+    });
   };
 
   return (

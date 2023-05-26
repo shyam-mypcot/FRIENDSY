@@ -92,6 +92,7 @@ const Login = ({navigation}) => {
       <Text
         style={{
           alignSelf: 'center',
+          color: '#000',
           marginTop: 100,
           fontSize: 20,
           fontWeight: '800',
@@ -99,6 +100,7 @@ const Login = ({navigation}) => {
         FRIENDSY
       </Text>
       <TextInput
+        placeholderTextColor={'#202020'}
         value={email}
         onChangeText={txt => {
           setEmail(txt);
@@ -112,9 +114,11 @@ const Login = ({navigation}) => {
           alignSelf: 'center',
           paddingLeft: 15,
           marginTop: 100,
+          color:'#000',
         }}
       />
       <TextInput
+        placeholderTextColor={'#202020'}
         value={password}
         onChangeText={txt => {
           setPassword(txt);
@@ -128,6 +132,7 @@ const Login = ({navigation}) => {
           borderWidth: 0.5,
           alignSelf: 'center',
           marginTop: 20,
+        color:'#000',
         }}
       />
       <TouchableOpacity
@@ -144,11 +149,12 @@ const Login = ({navigation}) => {
         onPress={() => {
           checkLogin();
         }}>
-        <Text style={{fontSize: 20, color: '#000'}}>Login</Text>
+        <Text style={{color: '#000', fontSize: 20}}>Login</Text>
       </TouchableOpacity>
       <Text
         style={{
           fontSize: 18,
+          color: '#000',
           marginTop: 30,
           textDecorationLine: 'underline',
           alignSelf: 'center',

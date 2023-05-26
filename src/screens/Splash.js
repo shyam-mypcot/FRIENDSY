@@ -19,10 +19,10 @@ const Splash = ({navigation}) => {
   };
   return (
     <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
-      <Text style={{fontSize: 30, fontWeight: '800', color: '#000'}}>
+      <Text style={{ color:'#000',fontSize: 30, fontWeight: '800', }}>
         FRIENDSY
       </Text>
-      <Text style={{fontSize: 14, fontWeight: '800', color: 'red'}}>
+      <Text style={{ fontSize: 14, fontWeight: '800', color: 'red'}}>
       The Social App
       </Text>
     </View>

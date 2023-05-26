@@ -12,12 +12,14 @@ const Chat = () => {
   }, []);
   const getAllChats = async () => {
     myId = await AsyncStorage.getItem('USERID');
-    console.log(myId);
+    name = await AsyncStorage.getItem('NAME');
+
+    console.log(myId,'myid................');
     firestore()
       .collection('Users')
       .doc(myId)
       .onSnapshot(documentSnapshot => {
-        console.log(documentSnapshot);
+        console.log(documentSnapshot._data.chatList,'documentSnapshot..............');
         setChatList(documentSnapshot._data.chatList);
       });
     // firestore()
@@ -45,15 +47,18 @@ const Chat = () => {
                 alignItems: 'center',
               }}
               onPress={() => {
+                
                 navigation.navigate('Messages', {
                   data: {
-                    name: item.senderName,
+                    name: item.name,
                     profilePic: item.profilePic,
-                    userId: item.senderId,
+                    userId: item.userId,
                     chatId: item.chatId,
                     myId: myId,
+                    senderName: name,
                   },
                 });
+
               }}>
               <Image
                 source={require('../images/user.png')}
@@ -64,8 +69,8 @@ const Chat = () => {
                   marginLeft: 20,
                 }}
               />
-              <Text style={{marginLeft: 20, fontSize: 18}}>
-                {item.receieverName}
+              <Text style={{ color:'#000',marginLeft: 20, fontSize: 18}}>
+                {item.name == name?item.senderName:item.name}
               </Text>
             </TouchableOpacity>
           );

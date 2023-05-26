@@ -10,15 +10,18 @@ import storage from '@react-native-firebase/storage';
 import uuid from 'react-native-uuid';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import Video from 'react-native-video';
+let chatList = [{chatId:'12345678'}];
+
 const NewMessage = () => {
   const [messages, setMessages] = useState([]);
   const [imageData, setImageData] = useState(null);
   const [imageUrl, setImageUrl] = useState('');
   const route = useRoute();
   useEffect(() => {
+    console.log(route.params.data.chatId,'(route.params.data.chatId.........................')
     const querySnapShot = firestore()
       .collection('chats')
-      .doc('123456789')
+      .doc(route.params.data.chatId)
       .collection('messages')
       .orderBy('createdAt', 'desc');
     querySnapShot.onSnapshot(snapShot => {
@@ -27,6 +30,7 @@ const NewMessage = () => {
       });
       setMessages(allMessages);
     });
+    
   }, []);
 
   const onSend = messageArray => {
@@ -53,7 +57,7 @@ const NewMessage = () => {
     setMessages(previousMessages => GiftedChat.append(previousMessages, myMsg));
     firestore()
       .collection('chats')
-      .doc('123456789')
+      .doc(route.params.data.chatId)
       .collection('messages')
       .add({
         ...myMsg,

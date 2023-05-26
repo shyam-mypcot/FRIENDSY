@@ -68,7 +68,7 @@ const Comments = () => {
           borderBottomColor: '#8e8e8e',
           alignItems: 'center',
         }}>
-        <Text style={{marginLeft: 15, fontSize: 18, fontWeight: '600'}}>
+        <Text style={{ color:'#000',marginLeft: 15, fontSize: 18, fontWeight: '600'}}>
           Comments
         </Text>
       </View>
@@ -108,10 +108,10 @@ const Comments = () => {
               )}
 
               <View>
-                <Text style={{fontSize: 18, fontWeight: '600'}}>
+                <Text style={{ color:'#000',fontSize: 18, fontWeight: '600'}}>
                   {item.name}
                 </Text>
-                <Text style={{fontSize: 16, fontWeight: '600', marginTop: 5}}>
+                <Text style={{ color:'#000',fontSize: 16, fontWeight: '600', marginTop: 5}}>
                   {item.comment}
                 </Text>
               </View>
@@ -130,17 +130,18 @@ const Comments = () => {
           alignItems: 'center',
           backgroundColor: '#fff',
         }}>
-        <TextInput
+        <TextInput placeholderTextColor={'#202020'}
+
           ref={inputRef}
           value={comment}
           onChangeText={txt => {
             setComment(txt);
           }}
           placeholder="type comment here..."
-          style={{width: '80%', marginLeft: 20}}
+          style={{width: '80%', marginLeft: 20,color:'#000'}}
         />
         <Text
-          style={{marginRight: 10, fontSize: 18, fontWeight: '600'}}
+          style={{color:'#000',marginRight: 10, fontSize: 18, fontWeight: '600'}}
           onPress={() => {
             postComment();
           }}>
